@@ -28,7 +28,6 @@
 		&:hover{
 			@include Hshadow();
 			@include scale();
-
 		}
 		&:before{
 			content: "";
