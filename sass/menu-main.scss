@@ -1,0 +1,68 @@
+.menu-main {
+	display: inline-block;
+	position: absolute;
+	left: -45px;
+	&__item {
+		width: 45px;
+		height: 45px;
+		display: block;
+		background-color: #eee;
+		position: relative;
+		
+		&:before {
+			content:"";		
+			width: 35px;
+			height: 35px;
+			background-repeat: no-repeat;
+			top:5px;
+			left:7px;
+			position: absolute;
+		}
+		
+	}
+	
+	&--back{
+		background-color: $gray;
+		
+		&:before{
+			background-image: url(../img/back.png);
+			top:8px;
+		}
+	}
+	&--profile{
+		background-color: $purple;
+		
+		&:before{
+			background-image: url(../img/profile.png);
+		}
+
+	}
+	&--events{
+		background-color: #19b5fe;
+		
+		&:before{
+			background-image: url(../img/events.png);
+		}
+	}
+	&--notes{
+		background-color: $red;
+		&:before{
+			background-image: url(../img/notes.png);
+		}
+	}
+	&--calendar{
+		background-color: $yellow;
+		
+		&:before{
+			background-image: url(../img/calendar.png);
+			left: 5px;
+		}
+	}
+	&--planning{
+		background-color: $green;
+		
+		&:before{
+			background-image: url(../img/planning.png);
+		}
+	}
+}
