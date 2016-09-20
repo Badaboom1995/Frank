@@ -1,3 +1,8 @@
-.general__calendar{
-	background-color: #f1c40f;
+.general {
+	&__events {
+		background-color: $blue;
+	}
+	&__calendar{
+		background-color: $yellow;
+	}
 }
