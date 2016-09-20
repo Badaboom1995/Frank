@@ -1,0 +1,33 @@
+.calendar{
+	border-collapse: collapse;
+	&__title-cell{
+		width: 135px;
+		border: 1px solid #d2d2d2;
+		margin: 0;
+		height: 30px;
+		background-color: #eee;
+		color: #000;
+		font-size: 18px;
+		font-weight: normal;
+	}
+	&__day{
+		width: 135px;
+		background-color: #444;
+		height: 100px;
+		border: 1px solid #666;
+		color: #fff;
+		position: relative;
+	}
+	&__day--past{
+		// background-color: #ccc;
+		.calendar__date{
+			color: #ccc;
+		}
+	}
+	&__date{
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		font-size: 18px;
+	}
+}

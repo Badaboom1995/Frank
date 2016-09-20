@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frank calendar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="general__calendar">
+  <div class="frank-title">
+      <p class="frank-title__frank">Frank</p>
+      <h2 class ="frank-title__name">Календарь</h2>
+ </div>
+ <main class="container">
+    <div class="menu-main">
+     <a href="index.html" class="menu-main__item menu-main--back"></a>
+     <a href="profile.html" class="menu-main__item menu-main--profile"></a>
+     <a href="events.html" class="menu-main__item menu-main--events"></a>
+     <a href="notes.html" class="menu-main__item menu-main--notes"></a>
+     <a href="calendar.html" class="menu-main__item menu-main--calendar"></a>
+     <a href="planning.html" class="menu-main__item menu-main--planning"></a>
+    </div>
+    <div class="main-window">
+      <nav class="months">
+        <ul class="months__list">
+          <li class="months__list-item"><a href="#" class="months__list-link">Июнь</a></li>
+          <li class="months__list-item"><a href="#" class="months__list-link active">Июль</a></li>
+          <li class="months__list-item"><a href="#" class="months__list-link">Август</a></li>
+        </ul>
+        <span class="months__control"></span>
+        <span class="months__control months__control--right"></span>
+      </nav>
+      <table class="calendar">
+        <tr class="calendar__title-row">
+          <th class="calendar__title-cell">Понедельник</th>
+          <th class="calendar__title-cell">Вторник</th>
+          <th class="calendar__title-cell">Среда</th>
+          <th class="calendar__title-cell">Четверг</th>
+          <th class="calendar__title-cell">Пятница</th>
+          <th class="calendar__title-cell">Суббота</th>
+          <th class="calendar__title-cell">Воскресенье</th>
+        </tr>
+        <tr>
+          <td class="calendar__day calendar__day--past">
+            <span class="calendar__date">29</span>
+          </td>
+          <td class="calendar__day calendar__day--past">
+            <span class="calendar__date">29</span>
+          </td>
+          <td class="calendar__day calendar__day--now">
+            <span class="calendar__date">29</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+          </td>
+          <td class="calendar__day">
+            <span class="calendar__date">29</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

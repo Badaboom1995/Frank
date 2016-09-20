@@ -1,0 +1,23 @@
+.months{
+	display: flex;
+	justify-content: center;
+	&__list{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 370px;
+		padding-left: 0;
+	}
+	&__list-item{
+		margin-right: 10px;
+	}
+	&__list-link{
+		padding: 10px;
+		text-decoration: none;
+		color: #000;
+		font-size: 20px;
+		&.active{
+			font-size: 30px;
+		}
+	}
+}
