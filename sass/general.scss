@@ -4,5 +4,8 @@
 	}
 	&__calendar{
 		background-color: $yellow;
+		.main-window{
+			overflow: visible;
+		}
 	}
 }

@@ -1,5 +1,6 @@
 .calendar{
 	border-collapse: collapse;
+	border: 1px solid transparent;
 	&__title-cell{
 		width: 135px;
 		border: 1px solid #d2d2d2;
@@ -11,18 +12,44 @@
 		font-weight: normal;
 	}
 	&__day{
+		text-align: center;
 		width: 135px;
-		background-color: #444;
-		height: 100px;
+		background-color: #fff;
+		height: 97px;
 		border: 1px solid #666;
-		color: #fff;
+		color: #000;
 		position: relative;
+
+		&:hover{
+			background-color: $blue;
+			cursor: pointer;
+			transform:scale(1.1);
+			border: 1px solid transparent;
+			@include transition();
+			@include Hshadow();
+			z-index: 9;
+			-webkit-backface-visibility: hidden;
+			.calendar__date{
+				color: #fff;
+				@include transition();
+			}
+		}
 	}
-	&__day--past{
-		// background-color: #ccc;
+	&__day--past{		
 		.calendar__date{
 			color: #ccc;
 		}
+	}
+	&__events-completed{
+		color: $green;
+		font-size: 30px;
+	}
+	&__events-planned{
+		color: #fff;
+		font-size: 26px;
+		padding: 14px 22px;
+		background-color: $green;
+		border-radius: 50%;
 	}
 	&__date{
 		position: absolute;
