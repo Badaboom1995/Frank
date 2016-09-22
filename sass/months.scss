@@ -5,8 +5,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 370px;
+		width: 350px;
 		padding-left: 0;
+		position: relative;
 	}
 	&__list-item{
 		margin-right: 10px;
@@ -16,8 +17,33 @@
 		text-decoration: none;
 		color: #000;
 		font-size: 20px;
+		position: relative;
+		@include transitionF();
+		&:hover{
+			color: $yellow;
+		}
 		&.active{
 			font-size: 30px;
+		}
+		
+	}
+	&__control{
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		right: 0;
+		cursor: pointer;
+		@include transitionF();
+		&--left{
+			left: 0;
+			transform:rotate(180deg);			
+		}		
+	}
+	&__control-svg{
+		fill:#000;
+		@include transition();
+		&:hover{
+			fill:$yellow;
 		}
 	}
 }
