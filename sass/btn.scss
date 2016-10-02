@@ -1,13 +1,17 @@
 .btn{
 	text-align: center;
 	display: block;
+	min-width: 140px;
+	margin: 0 auto;
 	padding: 10px;
+	border: none;
 	background-color:#46cf8f;
 	border-radius: 10px;
 	margin-bottom: 5px;
 	color: #fff;
 	text-decoration: none;
 	@include transitionF();
+	cursor: pointer;
 	&:hover{
 		@include Lscale();
 		@include BTNshadow($green);

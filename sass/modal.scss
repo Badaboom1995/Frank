@@ -8,21 +8,22 @@
 	left: 50%;
 	z-index: 10001;
 	transform: translateX(-50%);
-	top: 100px;
+	top: -100px;
 	display: block;
+	border: 1px solid $gray-dark;
 	// display: none;
 	&--calendar{
 		width: 700px;
 	}
 	&__background {
-		background-color: rgba(0,0,0,0.7); 
+		background-color: rgba(0,0,0,0.9); 
 		height: 100%;
 		left: 0;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
-		display: none;
+		// display: none;
 	}
 	&__head-calendar{
 		@include separate();
@@ -35,6 +36,8 @@
 	&__title{
 		position: relative;
 		text-align: center;
+		font-size: 36px;
+		font-weight: normal;
 	}
 	&__subtitle{
 		text-align: center;
@@ -54,7 +57,7 @@
 		left: 0;
 		height: 2px;
 		content: "";
-		border-bottom: 2px solid #444444;
+		@include separate();
 	}
 	&__main:before {
 		position: absolute;
@@ -63,7 +66,17 @@
 		left: 0;
 		height: 2px;
 		content: "";
-		border-bottom: 2px solid #444444;
+		@include separate();
+	}
+	&__name input[type="text"]{
+		@include fontSizePlaceholder(10px);
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__criterion input[type="text"]{
+		@include fontSizePlaceholder(10px);
+		text-align: center;
+		text-transform: uppercase;
 	}
 	&__name,
 	&__importance,
@@ -74,10 +87,21 @@
     	margin-bottom: 15px;
     	input[type="text"]{
 			border-color: transparent;
+			border-width: 2px;
+			@include colorPlaceholder(#999);
+			&:focus{
+				outline: none;
+				box-shadow:  0px 0px 5px 1px $yellow;
+				@include placeholderFadeOut(1s);
+				@include colorPlaceholder(transparent);
+
+	     	}
     	}
 	}
 	&__importance-range{
 		width: 200px;
+		background-color: transparent;
+		@include styleRange();
 	}
 	&__deadline-day{
 		width: 33px;
@@ -91,8 +115,9 @@
 	}
 	&__deadline-month,
 	&__deadline-year,
-	&__deadlin-day {
+	&__deadline-day {
 		text-align: center;
+		@include fontSizePlaceholder(12px);
 	}
     &__additionally-checkboxes{
     	text-align: left;
@@ -108,7 +133,7 @@
 		left: 0;
 		height: 2px;
 		content: "";
-		border-bottom: 2px solid #444444;
+		@include separate();
     }
     &__additionally {
     	position: relative;
@@ -123,5 +148,78 @@
     	margin: 10px 0px;
     	display: inline-block;
     }
-
+    &__timeline-wrapper{
+    	margin: 75px 0px;	
+    }
+    &__timeline{
+		display: flex;
+		height: 2px;
+		background-color: #000;
+		position: relative;
+    }
+    &__event-dot,&__event-line{
+    	position: absolute;
+    	top: 50%;
+    	transform:translateY(-50%);
+    	@include transitionF();
+    }
+    &__event-dot{
+    	left: 180px;
+    	width: 30px;
+    	height: 30px;
+    	border-radius: 50%;
+    	background-color: $green;
+    }
+    &__event-time {
+    	position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		top: -20px;
+    }
+    &__event-name{
+		position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		top: 20px;
+    }
+    &__event-dot-name{
+    	position: absolute;
+		left: 50%;
+		transform:translateX(-50%);
+		bottom: -20px;
+    }
+    &__event-line{
+    	width: 200px;
+    	height: 2px;
+    	left: 325px;
+    	background: linear-gradient(90deg,$orange,$green);
+    	&:before,&:after{
+    		content: '';
+    		height: 30px;
+    		width: 2px;
+    		display: inline-block;
+    		position: absolute;
+    		top: -15px;
+    	}
+    	&:before{
+    		background-color: $orange;
+    		left: 0;
+    	}
+    	&:after{
+    		background-color: $green;
+    		right: 0;
+    	}
+    }
+    &__event-start,&__event-end{
+    	position: absolute;
+    	top: -40px;
+    }
+    &__event-start{
+    	left: 0;
+    	transform:translateX(-50%)
+    }
+     &__event-end{
+    	right: 0;
+    	transform:translateX(50%)
+    }
 }
