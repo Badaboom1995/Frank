@@ -5,7 +5,7 @@
 	margin: 0 auto;
 	padding: 10px;
 	border: none;
-	background-color:#46cf8f;
+	background-color:$green;
 	border-radius: 10px;
 	margin-bottom: 5px;
 	color: #fff;
@@ -13,8 +13,7 @@
 	@include transitionF();
 	cursor: pointer;
 	&:hover{
-		@include Lscale();
-		@include BTNshadow($green);
+		background-color: darken($green,5%);
 	}
 	&--checkbox{
 		margin: 0;
@@ -32,10 +31,10 @@
 	&--subscribe {
 		display: inline-block;
 		padding: 5px 10px;
-		background-color: #33cc66;
-		color: #fff;
-		text-decoration: none;
-//		-webkit-border-radius: 7px;
-		border-radius: 7px;
+	}
+	&--comment{
+		display: inline-block;
+		padding: 5px 10px;
+		margin-bottom: 10px;
 	}
 }
