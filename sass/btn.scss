@@ -29,5 +29,13 @@
 			background-color: transparent;
 		}
 	}
-	
+	&--subscribe {
+		display: inline-block;
+		padding: 5px 10px;
+		background-color: #33cc66;
+		color: #fff;
+		text-decoration: none;
+//		-webkit-border-radius: 7px;
+		border-radius: 7px;
+	}
 }

@@ -204,6 +204,7 @@
       </table>
     </div>
     <div class="modal__background">
+        </div>
       <div class="modal modal--calendar">
         <div class="modal__head-calendar">
           <nav class="months">
@@ -226,6 +227,8 @@
             </ul>      
           </nav>
         </div>
+
+
         <div class="modal__stikers">
           <div class="stikers ">
               <div class="stikers__element stikers__element--modal">
@@ -276,8 +279,29 @@
             </div>
           </div>
         </div>
+        <div class="modal__total">
+          <div class="modal__total-info">
+            <p class="modal__total-title">Итого:</p>
+            <p class="modal__total-stat">
+              <span class="modal__stat-type">Время бодрствования</span>
+              <span class="modal__stat-value">10 часов</span>
+            </p>
+            <p class="modal__total-stat">
+              <span class="modal__stat-type">В работе</span>
+              <span class="modal__stat-value">10 часов</span>
+            </p>
+            <p class="modal__total-stat">
+              <span class="modal__stat-type">Выполнение задач</span>
+              <span class="modal__stat-value">3</span>
+            </p>
+            <p class="modal__total-stat">
+              <span class="modal__stat-type">Незафиксировано времени</span>
+              <span class="modal__stat-value">4 часа</span>
+            </p>
+          </div>
+          <canvas class="modal__total-canvas" id="total-circle" width="500px" height="500px"></canvas>
+        </div>
       </div>
-    </div>
   </main>
   <footer class="page-footer">
     <div class="page-footer__frank">
@@ -301,5 +325,7 @@
       </div>
     </div>
   </footer>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
