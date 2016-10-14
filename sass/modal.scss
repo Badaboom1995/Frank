@@ -12,6 +12,10 @@
 	margin-bottom: 50px;
 	border: 1px solid $gray-dark;
 	top: -1000px;
+	@media (max-width:$mobile-max){
+		width: 320px;
+		box-sizing: border-box;
+	}
 	@include transitionCustom(1s);
 	&--calendar{
 		width: 700px;
@@ -306,6 +310,5 @@
     &__total-canvas{
     	width: 200px;
     	height: 200px;
-    	// transform:rotate(-90deg);
     }
 }

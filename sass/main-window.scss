@@ -7,8 +7,13 @@
 	position: relative;
 	// overflow-y: scroll;
 	// max-height: 666px;
+	@media(max-width:$mobile-max){
+		background-color: #3c3c3c;
+	}
 	&__stikers{
 		padding-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
 		&--item {
 			list-style: none;
 			display: none;
@@ -18,10 +23,53 @@
 			}
 		}
 	}
+	&__control-mobile{
+		@media (max-width:1040px){
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: fixed;
+			right: 10px;
+			top: 50%;
+			transform:translateY(-50%);
+		}
+		@media (max-width:$mobile-max){
+			z-index: 999;
+			right: 10px;
+			margin-bottom: 0;
+			transform:none;
+		}
+		display: none;
+	}
+	&__control-mobile-arrow{
+		width: 20px;
+		height: 20px;
+		display: block;
+		margin-bottom: 10px;
+		border-top: 2px solid #000;
+		border-right: 2px solid #000;
+		transform:rotate(45deg);
+		@media (max-width:$mobile-max){
+			border-color: #fff;
+			border-width: 1px;
+		}
+		
+	}
+	&__control-mobile-sign{
+		color: transparent;
+	}
 	&__controls {
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 		text-align: center;
     	padding: 0px;
+    	@media (max-width:$mobile-max){
+			margin-bottom: 0px;
+			margin-top: 0;
+			padding: 20px 0px;
+			background-color: transparent;
+			@include separate();
+			margin-bottom: 1px;
+    	}
 		&--item {
 			display: inline-block;
 			margin-left: 10px;
@@ -45,25 +93,34 @@
 			}
 		}
 		&--link {
+			@media(max-width:$mobile-max){
+				color: #fff;
+			}
 			color: #000;
 			text-decoration: none;
-			display: block;	
+			display: block;
 	}		
   }
   &__more{
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 12px;	
-		background-color: #535353;
-		color: #fff;
-		padding: 10px 35px;		
-		border-radius: 15px;
-		font-size: 14px;
-		text-decoration: none;
-		@include transition();
-		&:hover{
-			bottom: 5px;
-		}
+	@media (max-width:$mobile-max){
+		width: 40%;
+		background-color: #3c3c3c;
+		bottom: -13px;
+		text-align: center;
 	}
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 12px;	
+	background-color: #535353;
+	color: #fff;
+	padding: 10px 35px;		
+	border-radius: 15px;
+	font-size: 14px;
+	text-decoration: none;
+	@include transition();
+	&:hover{
+		bottom: 5px;
+	}
+  }
 }

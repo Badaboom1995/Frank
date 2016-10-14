@@ -13,8 +13,10 @@
     	padding-right: 15px;
 	}
 	&__wall-item{
-		border-bottom: 1px solid;
 		margin-bottom: 10px;
+	}
+	&__wall-item-content{
+		border-bottom: 1px solid;
 	}
 	&__wall-item-head{
 		display: inline-block;
@@ -25,6 +27,35 @@
 		float: right;
 		display: inline-block;
 		margin-top: 15px;
+	}
+	&__wall-item-content{
+		margin-bottom: 10px;
+	}
+	&__comment-info{
+		margin-bottom: 5px;
+		display: flex;
+		align-items: center;
+	}
+	&__comment-author-name,&__comment-time{
+		margin: 0;
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	&__comment-time{
+		color: #666;
+	}
+	&__comment-author-avatar{
+		width: auto;
+		height: 50px;
+	}
+	&__comment-content{
+		margin-bottom: 10px;
+	}
+	&__wall-item-comment{
+		padding: 10px;
+		padding-bottom: 5px;
+		border: 1px solid #000;
+		border-radius: 10px;
 	}
 	&__item-img{
 		display: block;
@@ -41,6 +72,9 @@
 	}
 	&__wall-link-item{
 		margin-right: 5px;
+		text-decoration: none;
+		display: inline-block;
+		width: 20px;
 	}
 	&__sidebar-element{
 		color: #000;
@@ -58,12 +92,12 @@
 	&__goals-title:before,
 	&__goals-title:after{
 		content:"";
-		height: 15px;
-		width: 15px;
+		height: 8px;
+		width: 8px;
 		position: absolute;
 		cursor: pointer;
-		border-left: 2px solid #000;
-		border-bottom: 2px solid #000;
+		border-left: 1px solid #000;
+		border-bottom: 1px solid #000;
 	}
 	&__goals-content{
 		margin-top: 10px;
