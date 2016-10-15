@@ -1,6 +1,6 @@
 .add-sticker {
     &__plus {
-	@media (max-width:$mobile-max){
+	@media ($mobile){
 		position: fixed;
 		top: 10px;
 		z-index: 9;

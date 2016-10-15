@@ -11,8 +11,10 @@ $menu-blocks: #2c3e50;
 
 $container: 940px;
 
-$tablet-max: 1040px;
-$mobile-max: 740px;
+// $tablet-max: 1040px;
+// $mobile-max: 740px;
+$mobile:"max-width:740px";
+$tablet:"max-width:1040px";
 
 
 /*Для стилизации бегунка*/
