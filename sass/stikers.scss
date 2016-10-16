@@ -11,6 +11,15 @@
 	@media ($mobile){
 		padding: 0;
 	}
+	&--modal{
+		padding-right: 0;
+		padding-left: 0;
+		flex-wrap: nowrap;
+		@media ($mobile){
+		flex-wrap: wrap;
+		flex-direction: column;
+	  }
+	}
 	&__title {
 		text-align: center;
 		font-size: 18px;
@@ -79,15 +88,18 @@
 		}
 		&--modal{
 			width: 180px;
-			margin-right: 47px;
+			margin-right: 70px;
 			text-align: left;
 			margin-bottom: 20px;
-			&:nth-child(3n+1){
-				margin-left: 0;
-			}
-			&:nth-child(3n){
-				margin-right: 0;
-			}
+			@media ($mobile){
+				width: auto;
+		    }
+			// &:nth-child(3n+1){
+			// 	margin-left: 0;
+			// }
+			// &:nth-child(3n){
+			// 	margin-right: 0;
+			// }
 		}
 	}
 	&__attribute-wrapper{
